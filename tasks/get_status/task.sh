@@ -26,7 +26,7 @@ pushd states
   echo $cpu_temp > cpu_temp
   echo $case_fan1 > case_fan1
   echo $case_fan2 > case_fan2
-  echo $cpu_fan > cpu_temp
+  echo $cpu_fan > cpu_fan
   echo $gpu_temp > gpu_temp
   echo $sys_temp > sys_temp
   echo $psu_temp > psu_temp
