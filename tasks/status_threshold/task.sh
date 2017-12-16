@@ -9,17 +9,17 @@ pushd states
 popd
 pushd git_monitor/state
   for i in ${states[*]}; do
-    readings=$i
     a="${i}_threshold"
     threshold=${!a}
     a="${i}"
     result=${!a}
+    readings=$(cat $i)
     if [ $result -gt $threshold ]; then
-      if [ ! -s $readings  ]; then
+      if [ "$readings" == "" ]; then
         echo $result > $readings
       fi
     else
-      if [ -s $readings ]; then
+      if [ "$readings" != "" ]; then
         echo "" > $readings
       fi
     fi
