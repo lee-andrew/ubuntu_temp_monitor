@@ -16,11 +16,11 @@ pushd git_monitor/state
     readings=$(cat $i)
     if [ $result -gt $threshold ]; then
       if [ "$readings" == "" ]; then
-        echo $result > $readings
+        echo $result > $i
       fi
     else
       if [ "$readings" != "" ]; then
-        echo "" > $readings
+        echo "" > $i
       fi
     fi
     if [[ -n $(git status --porcelain) ]]; then
