@@ -1,0 +1,8 @@
+platform: linux
+outputs: [ {name: states} ]
+image_resource:
+  type: docker-image
+  source:
+  repository: alexedev/ubuntu-sshpass
+inputs: [ {name: git_monitor} ]
+run: git_monitor/tasks/get_status/task.sh
