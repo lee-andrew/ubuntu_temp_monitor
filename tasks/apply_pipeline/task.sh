@@ -10,5 +10,5 @@ cp fly_linux_amd64 fly
 ./fly -t ci login -c "http://$concourse_host:8080" --username=$concourse_username --password=$concourse_password
 
 pushd git_monitor
-	../fly -t ci set-pipeline -n -p spotify -c <(python set_pipeline.py ) -l <(echo $creds) -l thresholds/thresholds.yml
+	../fly -t ci set-pipeline -n -p temp_monitor -c <(python pipeline.py ) -l <(echo $creds) -l thresholds/thresholds.yml
 popd
