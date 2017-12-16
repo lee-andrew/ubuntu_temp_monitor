@@ -5,4 +5,5 @@ image_resource:
   source:
   repository: alexedev/ubuntu-sshpass
 inputs: [ {name: git_monitor} ]
-run: git_monitor/tasks/get_status/task.sh
+run: 
+  path: git_monitor/tasks/get_status/task.sh
