@@ -3,6 +3,6 @@ image_resource:
   type: docker-image
   source:
     repository: appropriate/curl
-inputs: [ {name: git_monitor_trigger_cpu_temp} ]
+inputs: [ {name: git_monitor_trigger_cpu_temp}, {name: git_monitor} ]
 run:
-  path: git_monitor_trigger_cpu_temp/tasks/post_cpu_temp/task.sh
+  path: git_monitor/tasks/post_cpu_temp/task.sh
