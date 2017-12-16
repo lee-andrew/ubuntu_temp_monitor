@@ -1,6 +1,7 @@
 #!/bin/bash
 set -xe
 
+apt-get install wget
 wget https://github.com/concourse/concourse/releases/download/v3.8.0/fly_linux_amd64
 chmod +x fly*
 
