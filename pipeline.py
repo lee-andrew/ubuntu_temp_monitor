@@ -47,13 +47,13 @@ jobs:
     params:
       git_user: ((git_user))
       git_email: ((git_email))
-      cpu_temp_threshold: 40
-      gpu_temp_threshold: 50
-      psu_temp_threshold: 50
-      sys_temp_threshold: 40
-      cpu_fan_threshold: 1000
-      case_fan1_threshold: 1000
-      case_fan2_threshold: 1000
+      cpu_temp_threshold: ((cpu_temp_threshold))
+      gpu_temp_threshold: ((gpu_temp_threshold))
+      psu_temp_threshold: ((psu_temp_threshold))
+      sys_temp_threshold: ((sys_temp_threshold))
+      cpu_fan_threshold: ((cpu_fan_threshold))
+      case_fan1_threshold: ((case_fan1_threshold))
+      case_fan2_threshold: ((case_fan2_threshold))
     file: git_monitor/tasks/status_threshold/task.yml
     
   - put: git_monitor

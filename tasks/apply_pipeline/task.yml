@@ -1,0 +1,14 @@
+---
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+    repository: inutano/wget
+
+inputs:
+- name: git_monitor
+- name: git_monitor_trigger
+
+run:
+  path: git_monitor/tasks/apply_pipeline/task.sh
