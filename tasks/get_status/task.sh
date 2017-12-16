@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-echo "Securing connecting..."
+echo "Securing connecting."
 
 results=$(sshpass -p $ssh_pass ssh -o StrictHostKeyChecking=no  $ssh_user@$ssh_host sensors)
 case_fan1=$(echo "$results" | grep fan2 | tr -s ' ' | cut -d' ' -f2)
