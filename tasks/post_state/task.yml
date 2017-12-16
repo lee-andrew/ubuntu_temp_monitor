@@ -1,0 +1,8 @@
+platform: linux
+image_resource:
+  type: docker-image
+  source:
+    repository: appropriate/curl
+inputs: [ {name: git_monitor_trigger}, {name: git_monitor} ]
+run:
+  path: git_monitor/tasks/post_state/task.sh
