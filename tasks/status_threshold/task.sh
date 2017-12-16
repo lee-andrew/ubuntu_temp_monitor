@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+set -ex
 
 pushd states
   for i in *; do
