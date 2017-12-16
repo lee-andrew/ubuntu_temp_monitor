@@ -1,5 +1,5 @@
 #!/bin/bash
-set -xe
+set -e
 
 apt-get install wget
 wget https://github.com/concourse/concourse/releases/download/v3.8.0/fly_linux_amd64
