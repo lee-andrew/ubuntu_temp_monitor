@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 set -ex
 
 cd git_monitor_trigger_cpu_temp/state
